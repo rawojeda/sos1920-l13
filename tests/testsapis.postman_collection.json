@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "990b7e23-60f3-40bf-9245-f456cc7b713f",
+		"name": "testsapis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9999/api/v1/contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30c2b644-02c3-48cc-9980-d0c62fcda8db",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"tests[\"testing stuffs\"] = jsonData.length === 7;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9999/api/v1/contacts"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
